@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
-import { AuthPageLibComponent } from './auth-page-lib.component';
-
+import { SignInComponent } from './sign-in/sign-in.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
-    AuthPageLibComponent
+    SignInComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
-    AuthPageLibComponent
+    SignInComponent
   ]
 })
 export class AuthPageLibModule { }

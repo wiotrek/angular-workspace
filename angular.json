@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/auth-page-lib/ng-package.json"
+            "project": "projects/auth-page-lib/ng-package.json",
           },
           "configurations": {
             "production": {

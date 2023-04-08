@@ -1,0 +1,24 @@
+<div class="wrapper">
+
+  <h2 class="title">{{title}}</h2>
+
+  <form class="sign-in">
+
+    <div class="field" *ngFor="let field of fields">
+
+      <label
+        [for]="field.codeName"
+        class="field__label"
+      >{{field.displayName}}</label>
+
+      <input
+        [type]="field.inputType"
+        class="field__input"
+        [id]="field.codeName"
+      >
+
+    </div>
+
+  </form>
+
+</div>
