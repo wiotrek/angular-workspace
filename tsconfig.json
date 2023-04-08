@@ -2,6 +2,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "auth-page-lib": [
+        "dist/auth-page-lib"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

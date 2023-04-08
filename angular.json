@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "auth-page-lib": {
+      "projectType": "library",
+      "root": "projects/auth-page-lib",
+      "sourceRoot": "projects/auth-page-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/auth-page-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/auth-page-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/auth-page-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/auth-page-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
