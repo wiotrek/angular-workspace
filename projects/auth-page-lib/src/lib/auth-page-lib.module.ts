@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
-import { AuthPageLibComponent } from './auth-page-lib.component';
-
+import { SignInComponent } from './sign-in/sign-in.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
-    AuthPageLibComponent
+    SignInComponent
   ],
   imports: [
+    CommonModule,
+    MatIconModule,
+    ReactiveFormsModule
   ],
   exports: [
-    AuthPageLibComponent
+    SignInComponent
   ]
 })
 export class AuthPageLibModule { }

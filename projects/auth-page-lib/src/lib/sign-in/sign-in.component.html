@@ -1,0 +1,35 @@
+<div class="wrapper">
+
+  <h2 class="title">{{title}}</h2>
+
+  <form
+    class="sign-in"
+    [formGroup]="signInForm"
+    (ngSubmit)="signInForm.valid && auth.emit(signInForm)"
+  >
+
+    <div class="field" *ngFor="let field of fields">
+
+      <label
+        [for]="field.codeName"
+        class="field__label"
+      >{{field.displayName}}</label>
+
+      <input
+        [type]="field.inputType"
+        class="field__input"
+        [id]="field.codeName"
+        [formControlName]="field.codeName"
+      >
+
+    </div>
+
+    <button
+      class="confirm-btn"
+    >
+      <mat-icon>arrow_forwarder</mat-icon>
+    </button>  
+
+  </form>
+
+</div>
