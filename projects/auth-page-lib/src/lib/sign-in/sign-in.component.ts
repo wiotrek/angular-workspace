@@ -1,5 +1,6 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { FieldModel } from "../models/field.model";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 
 @Component({
@@ -23,4 +24,27 @@ export class SignInComponent {
       inputType: 'password'
     }
   ];
+
+  @Input() signInForm: FormGroup = this.fb.group({
+    username: [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(255)
+      ]
+    ],
+    password: [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(255)
+      ]
+    ]
+  });
+
+  @Output() auth = new EventEmitter<FormGroup>();
+
+  constructor(private fb: FormBuilder) {}
 }
