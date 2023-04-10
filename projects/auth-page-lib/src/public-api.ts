@@ -4,3 +4,4 @@
 
 export * from './lib/sign-in/sign-in.component';
 export * from './lib/auth-page-lib.module';
+export { FieldModel } from './lib/models/field.model';
